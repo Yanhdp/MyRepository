@@ -17,7 +17,7 @@
   body { font-family: Arial, sans-serif; padding: 10px; background: #f8f8f8; }
   table { border-collapse: collapse; width: 100%; margin-top: 10px; background: white; }
   th, td { border: 1px solid #ccc; padding: 5px; text-align: center; }
-  button { width: 30px; height: 30px; font-size: 18px; border-radius: 6px; border: 1px solid #888; }
+  button { border-radius: 6px; border: 1px solid #888; }
   h2 { margin-top: 20px; }
   #zerar { 
     margin-top: 20px; 
@@ -29,6 +29,17 @@
     border: none; 
     width: 100%;
   }
+  .controle-dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .controle-dia button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
 </style>
 </head>
 <body>
@@ -39,12 +50,12 @@
     <th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th><th>Sábado</th>
   </tr>
   <tr>
-    <td><button onclick="alterarDia(0,-1)">-</button> <span id="dia0">0</span> <button onclick="alterarDia(0,1)">+</button></td>
-    <td><button onclick="alterarDia(1,-1)">-</button> <span id="dia1">0</span> <button onclick="alterarDia(1,1)">+</button></td>
-    <td><button onclick="alterarDia(2,-1)">-</button> <span id="dia2">0</span> <button onclick="alterarDia(2,1)">+</button></td>
-    <td><button onclick="alterarDia(3,-1)">-</button> <span id="dia3">0</span> <button onclick="alterarDia(3,1)">+</button></td>
-    <td><button onclick="alterarDia(4,-1)">-</button> <span id="dia4">0</span> <button onclick="alterarDia(4,1)">+</button></td>
-    <td><button onclick="alterarDia(5,-1)">-</button> <span id="dia5">0</span> <button onclick="alterarDia(5,1)">+</button></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(0,1)">+</button><span id="dia0">0</span><button onclick="alterarDia(0,-1)">-</button></div></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(1,1)">+</button><span id="dia1">0</span><button onclick="alterarDia(1,-1)">-</button></div></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(2,1)">+</button><span id="dia2">0</span><button onclick="alterarDia(2,-1)">-</button></div></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(3,1)">+</button><span id="dia3">0</span><button onclick="alterarDia(3,-1)">-</button></div></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(4,1)">+</button><span id="dia4">0</span><button onclick="alterarDia(4,-1)">-</button></div></td>
+    <td><div class="controle-dia"><button onclick="alterarDia(5,1)">+</button><span id="dia5">0</span><button onclick="alterarDia(5,-1)">-</button></div></td>
   </tr>
 </table>
 
